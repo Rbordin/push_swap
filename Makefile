@@ -6,7 +6,7 @@
 #    By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/16 15:27:31 by dcologgi          #+#    #+#              #
-#    Updated: 2023/05/04 16:00:21 by rbordin          ###   ########.fr        #
+#    Updated: 2023/05/08 14:14:16 by rbordin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,14 +30,12 @@ SRC = check_input.c \
 	complex_sort_utils2.c \
 	complex_sort.c \
 	fill_stack.c \
-	lis_utils.c \
 	print_stack.c \
 	reverserotate_move.c \
 	rotate_move.c \
 	simple_sort_utils.c \
 	simple_sort.c \
 	swap_push_move.c \
-	lis.c \
 	push_swap_utils.c \
 	string_input.c \
 

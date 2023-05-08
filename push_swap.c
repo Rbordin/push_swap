@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:57:59 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/04 16:18:27 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/08 14:11:40 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 		return (0);
 	if (stack.len <= 5)
 		simple_case(&stack);
-	lis_finder(&stack);
-	complex_case(&stack);
+	if (stack.len > 5)
+		complex_case(&stack);
 	ft_cleaner(&stack);
 }

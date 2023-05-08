@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:43:01 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/03 15:43:48 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/08 14:10:27 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,15 @@ void	get_max(t_data *stack)
 	int	i;
 
 	i = 0;
-	stack->max = 0;
 	stack->max = stack->b[0];
 	while (i < stack->last_b)
 	{
-		i++;
-		if (stack->max < stack->b[i])
+		if (stack->max <= stack->b[i])
 		{
 			stack->max = stack->b[i];
 			stack->max_pos = i;
 		}
+		i++;
 	}
 }
 
@@ -35,11 +34,10 @@ void	get_min(t_data *stack)
 	int	i;
 
 	i = 0;
-	stack->min_pos = 0;
 	stack->min = stack->b[0];
 	while (i < stack->last_b)
 	{
-		if (stack->min > stack->b[i])
+		if (stack->min >= stack->b[i])
 		{
 			stack->min = stack->b[i];
 			stack->min_pos = i;

@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:41:15 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/03 15:48:50 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/08 14:15:03 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,7 @@ typedef struct s_data{
 	int	*a;
 	int	*b;
 
-	int	*lis_raw;
-	int	*lis;
-	int	*dp;
-	int	*prev;
 	int	len;
-	int	lis_raw_len;
-	int	lis_len;
-	int	lis_used;
 
 	int	last_a;
 	int	last_b;
@@ -66,12 +59,6 @@ void	rra(t_data *stack, int flag);
 void	rrb(t_data *stack, int flag);
 void	rrr(t_data *stack, int flag);
 void	fill_stack_a(t_data *stack, char **argv);
-void	lis_finder(t_data *stack);
-void	keep_lis(t_data *stack);
-void	lis_raw_check(t_data *stack);
-void	find_max_pos_lis(t_data *stack);
-void	lis_raw_gen(t_data *stack);
-void	lis_gen(t_data *stack);
 void	simple_case(t_data *stack);
 void	sort_2(t_data *stack);
 void	sort_3(t_data *stack);
@@ -110,8 +97,6 @@ void	ft_cleaner(t_data *stack);
 
 void	print_stack_a(t_data *stack);
 void	print_stack_b(t_data *stack);
-void	print_lis(t_data *stack);
-void	print_lis_raw(t_data *stack);
 void	cntr_n_pop(t_data *stack, char **temp);
 int		control(t_data *stack);
 int		count(char **temp);
