@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:40:49 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/03 14:40:55 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/09 15:10:23 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sa(t_data *stack, int flag)
 {
 	int	tmp;
 
-	if (stack->a[0] != 0 && stack->a[1] != 0)
+	if (stack->last_a >= 1)
 	{
 		tmp = stack->a[0];
 		stack->a[0] = stack->a[1];
@@ -33,7 +33,7 @@ void	sb(t_data *stack, int flag)
 {
 	int	tmp;
 
-	if (stack->b[0] != 0 && stack->b[1] != 0)
+	if (stack->last_b >= 2)
 	{
 		tmp = stack->b[0];
 		stack->b[0] = stack->b[1];

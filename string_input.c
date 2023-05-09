@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 15:10:50 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/03 15:47:36 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/09 15:10:56 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	control_doubles(t_data *stack)
 	while (i < stack->len)
 	{
 		j = i + 1;
-		while (j <= stack->len)
+		while (j < stack->len)
 		{
 			if (stack->a[i] == stack->a[j])
 				return (0);
