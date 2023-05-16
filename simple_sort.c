@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:44:14 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/03 14:44:17 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/16 16:25:09 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	sort_3(t_data *stack)
 {
 	if (stack->a[0] > stack->a[1] && stack->a[2] > stack->a[0])
 		sa(stack, 0);
-	if (stack->a[0] > stack->a[1] && stack->a[2] < stack->a[0])
+	if (stack->a[0] > stack->a[2] && stack->a[1] < stack->a[2])
 		ra(stack, 0);
 	if (stack->a[0] < stack->a[1] && stack->a[0] > stack->a[2])
 		rra(stack, 0);

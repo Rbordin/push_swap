@@ -5,21 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/16 15:27:31 by dcologgi          #+#    #+#              #
-#    Updated: 2023/05/08 14:14:16 by rbordin          ###   ########.fr        #
+#    Created: 2023/05/09 09:51:47 by rbordin           #+#    #+#              #
+#    Updated: 2023/05/09 09:51:51 by rbordin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# Variabili di compilazione
-
 NAME = push_swap
+
 B_NAME = checker
 
 LIBFT_PATH = ./libft
+
 LIBFT = $(LIBFT_PATH)/libft.a
+
 PRINTF_PATH = ./ft_printf
+
 PRINTF = $(PRINTF_PATH)/libftprintf.a
+
 GNL_PATH = ./get_next_line
+
 MAKEFLAGS += --silent
 
 MAIN = push_swap.c \
@@ -57,14 +61,12 @@ CFLAGS = -Wall -Wextra -Werror -g
 
 .o:.c
 		${cc} ${CFLAGS} -c $< -o $@
-		
 
 all: ${NAME}
 
 ${NAME}: ${M_OBJ} ${OBJ} ${LIBFT} ${PRINTF}
 		${CC} ${M_OBJ} ${OBJ} ${LIBFT} ${PRINTF} -o ${NAME}
 		@echo "\033[32mCompiled OK!\033[0m"
-
 
 ${LIBFT}:
 		make -C $(LIBFT_PATH)
@@ -87,5 +89,5 @@ fclean: clean
 re: fclean all
 
 bonus: ${OBJ} ${B_OBJ} ${LIBFT} ${PRINTF} 
-		${CC} ${OBJ} ${B_OBJ} ${LIBFT} ${PRINTF} -o ${B_NAME}
-		@echo "\033[36mBonus compiled OK!\033[0m"
+		${CC} ${OBJ} ${B_OBJ} ${LIBFT} ${PRINTF}  -o ${B_NAME}
+		@echo "\033[36mChecker compiled OK!\033[0m"

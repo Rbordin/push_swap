@@ -6,7 +6,7 @@
 /*   By: rbordin <rbordin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:38:15 by rbordin           #+#    #+#             */
-/*   Updated: 2023/05/08 14:11:26 by rbordin          ###   ########.fr       */
+/*   Updated: 2023/05/08 14:40:26 by rbordin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	complex_case(t_data *stack)
 	pb(stack, 0);
 	pb(stack, 0);
 	if (stack->b[0] < stack->b[1])
-		sb(&stack, 0);
+		sb(stack, 0);
 	while (stack->last_a >= 0)
 	{
 		stack->best_moves = stack->len;
